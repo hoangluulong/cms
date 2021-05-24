@@ -67,6 +67,8 @@ if ( empty( $product ) || ! $product->is_visible() ) {
 			 * @hooked woocommerce_template_loop_rating - 5
 			 * @hooked woocommerce_template_loop_price - 10
 			 */
+                        //echo get_post_meta( get_the_ID(), '_stock_status', true );
+                        echo '<p class="stock in-stock">Sản phẩm còn lại: ' .$product->get_stock_quantity().'</p>';
 			do_action( 'woocommerce_after_shop_loop_item_title' );
 			?>
 			<div class="custom-cart-btn">
